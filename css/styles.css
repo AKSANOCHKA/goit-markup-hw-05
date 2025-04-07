@@ -542,6 +542,7 @@ li {
    flex-shrink: 0;
    margin-left: 16px;
  }
+ 
 .soclink-svg-footer:hover,
 .soclink-svg-footer:focus {
   background-color: #31D0AA;
@@ -563,6 +564,7 @@ li {
   }
 
   /* footer-imput*/
+ 
 
   .container-footer-imput {
     display: flex;
@@ -588,9 +590,9 @@ li {
           font: 500 16px / 1.5 "Roboto", sans-serif;
           letter-spacing: 0.02em;
           color: #fff;
-          margin-left: 24px;
           margin-bottom: 16px;
         }
+                
     
         .footer-label {
           width: 100%;
@@ -619,6 +621,10 @@ li {
     
         .footer-btn {
           display: flex;
+          font-weight: 500;
+          line-height: 1.5;
+          letter-spacing: 0.04em;
+          color: #ffffff;
           align-items: center;
           justify-content: center;
           flex-direction: row;
@@ -629,7 +635,7 @@ li {
           padding-bottom: 8px;
           padding-left: 24px;
           padding-right: 0;
-          width: 165px;
+          min-width: 165px;
           height: 40px;
           border: none;
           cursor: pointer;
@@ -652,12 +658,7 @@ li {
   gap: 24px;
 }
 
-.input-text {
-  font: 500 16px / 1.5 "Roboto", sans-serif;
-  letter-spacing: 0.02em;
-  color: #fff;
-  margin-left: 24px;
-}
+
 
 .footer-label {
   width: 100%;
@@ -670,10 +671,14 @@ li {
   border-radius: 4px;
   background-color: transparent;
   color: #fff;
-  font-size: 14px;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
   outline: none;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   transition: border-color 0.3s ease;
+  width: 264px;
+  height: 40px;
 }
 
 .footer-input::placeholder {
@@ -715,7 +720,8 @@ li {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 1000;
 }
 
@@ -730,11 +736,15 @@ li {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   width: 408px;
   min-height: 584px;
   background-color: #fcfcfc;
   border-radius: 4px;
-  box-shadow: 0 8px 16px rgba(46, 47, 66, 0.2);
+    box-shadow:
+        0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 1px 3px rgba(0, 0, 0, 0.12),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
   padding: 72px 24px 24px;
 }
 
@@ -760,7 +770,8 @@ li {
   background-color: #404bbf;
 }
 
-.button_modal:hover .icon_button {
+.button_modal:hover .icon_button,
+button_modal:focus .icon_button {
   fill: #fff;
 }
 
@@ -769,6 +780,7 @@ li {
   margin-bottom: 16px;
   font: 500 16px/1.5 "Roboto", sans-serif;
   color: #2e2f42;
+  letter-spacing: 0.02em;
 }
 
 /* Input modal*/
@@ -782,6 +794,7 @@ li {
 .form-field {
   display: flex;
   flex-direction: column;
+  margin-bottom: 8px;
 }
 
 .input-container {
@@ -789,7 +802,9 @@ li {
 }
 
 .form-label {
-  font: 400 12px/1.17 "Roboto", sans-serif;
+  font-weight: 400; 
+  font-size: 12px;
+  line-height: 1.17;
   color: #8e8f99;
   margin-bottom: 4px;
 }
@@ -876,6 +891,7 @@ span {
   background-color: #4d5ae5;
 }
 .button-submit {
+  padding: 0;
   align-self: center;
   padding: 16px 32px;
   width: 169px;
@@ -888,8 +904,22 @@ span {
   letter-spacing: 0.04em;
   cursor: pointer;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    /* Анімація для зміни фону та межі */
+}
+.button-submit:hover {
+  border: none;
+  /* Обнулення межі при ховері */
 }
 
+/* Стиль при фокусі на кнопці */
+.button-submit:focus {
+  background-color: #404bbf;
+  /* Зміна кольору фону при фокусі */
+  border: none;
+  /* Обнулення межі при фокусі */
+}
 .modal-check-vector {
   margin-right: 8px;
 }
