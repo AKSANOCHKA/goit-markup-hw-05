@@ -438,7 +438,7 @@
       </section>
     </main>
 
-     <!--Footer-->
+    <!--Footer-->
 
     <footer class="footer">
       <div class="footer-container">
@@ -486,30 +486,39 @@
             </li>
           </ul>
         </div>
-     <div class="container-footer-input">
-    <p class="input-text">Subscribe</p>
-    <form class="footer-form">
-    <label class="footer-label" for="email">
-      <input
-        class="footer-input"
-        type="email"
-        name="email"
-        id="email"
-        placeholder="E-mail"
-        required
-      />
-    </label>
-    <button type="submit" class="footer-btn">
-      <span class="button-subscribe">Subscribe</span>
-      <svg class="footer-icon-btn" width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M24 0L0 11.25L7.66994 13.6172L19.5 4.375L10.5017 14.4913L10.509 14.4936L10.5 14.4913V20L14.8013 15.8183L20.2501 17.5L24 0Z" fill="white" />
-</svg>
-         <use href="./images/icons.svg#icon-icon-icon-send"></use>
-      </svg>
-    </button>
-    </form>
       </div>
-    </footer>  
+      <div class="container-footer-input">
+        <p class="input-text">Subscribe</p>
+        <form class="footer-form" action="#" method="POST">
+          <label class="footer-label" for="email">
+            <input
+              class="footer-input"
+              type="email"
+              name="email"
+              id="email"
+              placeholder="E-mail"
+              required
+            />
+          </label>
+          <button type="submit" class="footer-btn">
+            <span class="button-subscribe">Subscribe</span>
+            <svg
+              class="footer-icon-btn"
+              width="24"
+              height="24"
+              viewBox="0 0 24 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M24 0L0 11.25L7.66994 13.6172L19.5 4.375L10.5017 14.4913L10.509 14.4936L10.5 14.4913V20L14.8013 15.8183L20.2501 17.5L24 0Z"
+                fill="white"
+              />
+            </svg>
+          </button>
+        </form>
+      </div>
+    </footer>
 
     <!-- Modal -->
     <div class="backdrop is-open">
@@ -578,12 +587,11 @@
               ></textarea>
             </div>
           </div>
-
           <div class="modal-field">
             <input
               type="checkbox"
               name="user-privacy"
-              id="user-privacy"
+              id="policy"
               class="modal-check visually-hidden"
               value="true"
               checked
