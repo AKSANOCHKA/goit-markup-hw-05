@@ -894,51 +894,6 @@ li {
 }
 
 /* Checkbox */
-.modal-check-text {
-  font: 400 12px / 1.16667 "Roboto", sans-serif;
-  letter-spacing: 0.04em;
-  color: #8e8f99;
-  align-items: center;
-  display: flex;
-  position: relative;
-  cursor: pointer;
-  line-height: 1.17;
-}
-
-
-.modal-check:checked+.modal-check-text span {
-  background-color: #4d5ae5;
-  border: none;
-}
-
-.modal-check {
-  background-color: #4d5ae5;
-}
-
-.button-submit {
-  align-self: center;
-  padding: 16px 32px;
-  min-width: 169px;
-  height: 56px;
-  background: #4d5ae5;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  font: 500 16px/1.5 "Roboto", sans-serif;
-  letter-spacing: 0.04em;
-  cursor: pointer;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.modal-check-vector {
-  margin-right: 8px;
-  fill: transparent;
-  display: inline-flex;
-  border: 1px solid rgba(46, 47, 66, 0.4);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 .modal-field {
   font-size: 12px;
   margin-bottom: 24px;
@@ -950,15 +905,19 @@ li {
   pointer-events: none;
 }
 
-.modal-check {
-  position: absolute;
-  opacity: 0;
-  pointer-events: none;
+.modal-check-text {
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  font: 400 12px/1.17 "Roboto", sans-serif;
+  letter-spacing: 0.04em;
+  color: #8e8f99;
 }
 
-.modal-check-text .modal-check-vector {
+/* Checkbox Vector Box */
+.modal-check-vector {
   display: flex;
-  line-height: 1.17;
   align-items: center;
   justify-content: center;
   width: 16px;
@@ -967,24 +926,57 @@ li {
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 2px;
   background-color: #ffffff;
-  transition: background-color 0.3s ease, border-color 0.3s ease;
+  fill: transparent;
+  transition:
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-check-vector svg {
-  fill: transparent;
   display: inline-flex;
-  transition: fill 0.3s ease;
-  border: 1px solid rgba(46, 47, 66, 0.4);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  fill: transparent;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* Checked State Styles */
 .modal-check:checked+.modal-check-text .modal-check-vector {
   background-color: #4d5ae5;
   border-color: #4d5ae5;
 }
 
 .modal-check:checked+.modal-check-text .modal-check-vector svg {
-  fill: #F4F4FD;
+  fill: #f4f4fd;
+}
+
+/* ===== Submit Button Styles ===== */
+
+.button-submit {
+  align-self: center;
+  min-width: 169px;
+  height: 56px;
+  padding: 16px 32px;
+  background-color: #4d5ae5;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font: 500 16px/1.5 "Roboto", sans-serif;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button-submit:hover,
+.button-submit:focus {
+  background-color: #404bbf;
+}
+
+/* ===== Privacy Link ===== */
+
+.privacy-link {
+  color: var(--primary-brand-color);
+  /* предполагается: #4d5ae5 */
 }
 
 .button-submit:hover,
