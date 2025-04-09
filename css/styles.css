@@ -951,14 +951,15 @@ li {
 }
 
 /* Checked State Styles */
-.modal-check:checked + .modal-check-text .modal-check-vector {
+.modal-check:checked + .modal-check-text span {
   background-color: #404bbf;
   border: none;
 }
 
-.modal-check:checked + .modal-check-text .modal-checkbox-icon {
+.modal-check:checked + .modal-check-text svg {
   fill: #f4f4fd;
 }
+
 
 
 /* ===== Submit Button Styles ===== */
