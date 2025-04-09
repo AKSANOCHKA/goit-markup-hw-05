@@ -951,12 +951,12 @@ li {
 }
 
 /* Checked State Styles */
-.modal-check:checked + .modal-check-text span {
+.modal-check:checked+.modal-check-text>.modal-check-vector {
   background-color: #404bbf;
   border: none;
 }
 
-.modal-check:checked + .modal-check-text svg {
+.modal-check:checked+.modal-check-text>.modal-check-vector .modal-checkbox-icon {
   fill: #f4f4fd;
 }
 
