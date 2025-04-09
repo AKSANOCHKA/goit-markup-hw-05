@@ -919,7 +919,6 @@ li {
 }
 
 .modal-check-text {
-  display: flex;
   align-items: center;
   position: relative;
   cursor: pointer;
