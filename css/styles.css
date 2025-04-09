@@ -955,7 +955,6 @@ li {
 /* Checked State Styles */
 .modal-check:checked + .modal-check-text .modal-check-vector {
   background-color: #404bbf;
-  fill: #F4F4FD;;
   border: none;
 }
 
