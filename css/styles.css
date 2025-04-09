@@ -813,8 +813,12 @@ li {
 .form-field {
   display: flex;
   flex-direction: column;
-  margin-bottom: 16px;
-
+  margin-bottom: 8px;
+}
+.form-field-text {
+  display: flex;
+  flex-direction: column;
+  margin-bottom:16px;
 }
 
 .input-container {
