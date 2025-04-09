@@ -992,15 +992,13 @@ li {
 /* ===== Privacy Link ===== */
 
 .privacy-link {
-  color: var(--primary-brand-color);
-  /* предполагается: #4d5ae5 */
+  font: 400 12px / 1.33333 "Roboto", sans-serif;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    color: #4d5ae5;
 }
 
 .button-submit:hover,
 .button-submit:focus {
   background-color: #404BBF;
-}
-.privacy-link {
-  color: var(--primary-brand-color);
-  /* #4d5ae5 */
 }
