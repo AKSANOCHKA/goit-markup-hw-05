@@ -953,11 +953,17 @@ li {
 .modal-check:checked+.modal-check-text>.modal-check-vector {
   background-color: #404bbf;
   border: none;
+  fill: #f4f4fd;
 }
 
 .modal-check:checked+.modal-check-text>.modal-check-vector .modal-checkbox-icon {
   fill: #f4f4fd;
 }
+:root {
+  --blue-hover: #404bbf;
+  --light-icon: #f4f4fd;
+}
+
 
 /* ===== Submit Button Styles ===== */
 
